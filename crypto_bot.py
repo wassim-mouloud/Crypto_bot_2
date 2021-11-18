@@ -11,26 +11,7 @@ client = commands.Bot(command_prefix='.',intents=disnake.Intents.all(), activity
 async def on_ready():
     print("Hey I am ready ")
 
-@client.event 
-async def on_member_join(member):
-    await member.send("Hello, you're not welcome here get out of my server!!! 😘")
 
-
-@client.event
-async def on_message(message):
-    id=client.get_guild(889583100286369832)
-    if str(message.channel)=='bot_commands':
-        try:
-            if message.content.startswith('!'):
-                crypto_to_check=message.content.split("!")[1].lower()
-                await message.channel.send(get_crypto_price(crypto_to_check))
-        except:
-            await message.channel.send(f"sorry couldn't find {crypto_to_check} ")
-
-    if message.content=="hello":
-        await message.author.send("Hi hope you're having a great day")
-            
-    await client.process_commands(message)
 #this function checks if the command is being executed in the right channel
 def check_channel(ctx):
     if str(ctx.channel)=='bot_commands' or str(ctx.channel)=="🤖bot_commands" or str(ctx.channel)=="🤖 bot_commands":
