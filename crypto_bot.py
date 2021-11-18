@@ -163,7 +163,7 @@ async def top10(ctx):
         file_to_send+='\n'
     embed=disnake.Embed(title=file_to_send, color=disnake.Color.blue() )
     await ctx.send(embed=embed)
-client.run('ODg5MTEzNjIwMDUzNjM1MTEy.YUchlQ.klGEloHxDfzt_1mHb8iecGFD6j0')
+client.run('')
 
 
 
